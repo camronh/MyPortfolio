@@ -14,12 +14,15 @@
             </v-btn>
           </span>
           <v-spacer></v-spacer>
+          <v-btn icon @click="dialog = false" small>
+            <v-icon color="black">mdi-close</v-icon>
+          </v-btn>
         </v-card-title>
 
         <v-card-text>
           <v-card-title>Languages and Frameworks</v-card-title>
           <v-row dense>
-            <v-col cols="6" v-for="skill in skills" :key="skill.name">
+            <v-col cols="12" md="6" v-for="skill in skills" :key="skill.name">
               <v-list>
                 <v-list-item>
                   <v-list-item-content>
@@ -39,13 +42,6 @@
             </v-col>
           </v-row>
         </v-card-text>
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="blue darken-1" text @click="dialog = false"
-            >Close</v-btn
-          >
-        </v-card-actions>
       </v-card>
     </v-dialog>
   </v-btn>
